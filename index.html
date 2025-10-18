@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guia do Shape em 3 Meses — Versão Express</title>
+  <meta name="description" content="Guia prático e visual para transformar seu corpo em 90 dias. Método simples, sem academia necessária. Por apenas R$ 8,99." />
+  <style>
+    :root{--accent:#ff4d4f;--dark:#0f1720;--muted:#9aa4af;--card:#0b1220}
+    *{box-sizing:border-box}
+    body{font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:linear-gradient(180deg,#071021 0%, #061523 100%);color:#e6eef6;margin:0;line-height:1.45}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo img{width:60px;height:auto;border-radius:8px}
+    .cta-small{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;color:#fff;text-decoration:none}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:28px 0}
+    .hero-left h1{font-size:34px;margin:0 0 12px}
+    .highlight{color:var(--accent)}
+    .hero-left p{color:var(--muted);margin:0 0 18px}
+    .price-card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.04)}
+    .price{font-size:28px;font-weight:700}
+    .old{color:var(--muted);text-decoration:line-through;font-size:13px}
+    .buy-btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:700;margin-top:12px}
+    .micro{font-size:12px;color:var(--muted);margin-top:8px}
+
+    /* FEATURES */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .card h3{margin:0 0 8px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+
+    /* VISUALS */
+    .visuals{display:flex;gap:12px;margin-top:18px}
+    .visuals img{width:100%;border-radius:10px;object-fit:cover}
+
+    /* SECTIONS */
+    section{margin:36px 0;padding:20px;border-radius:12px}
+    .how{background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.02)}
+    .faq{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.02)}
+
+    /* TESTIMONIALS */
+    .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .t{padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.02)}
+    .small{font-size:13px;color:var(--muted)}
+
+    footer{color:var(--muted);font-size:13px;padding:30px 0;text-align:center}
+
+    /* responsive */
+    @media(max-width:980px){.hero{grid-template-columns:1fr;}.features{grid-template-columns:repeat(2,1fr)}.testimonials{grid-template-columns:1fr}} 
+    @media(max-width:560px){.features{grid-template-columns:1fr}}
+
+    /* subtle animations */
+    .fade{opacity:0;transform:translateY(8px);transition:all .7s ease}
+    .fade.show{opacity:1;transform:none}
+
+    .badge{display:inline-block;background:rgba(255,255,255,0.04);padding:6px 10px;border-radius:999px;font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="fotos/logo.png" alt="Guia do Shape Logo" />
+        <div>
+          <div style="font-weight:700">Guia do Shape</div>
+          <div style="font-size:12px;color:var(--muted)">Versão Express • R$ 8,99</div>
+        </div>
+      </div>
+      <nav>
+        <a class="cta-small" href="#como">Como funciona</a>
+        <a class="cta-small" href="#depoimentos">Provas</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <div class="badge">oferta relampago • esgotando...</div>
+          <h1 class="fade show">POV: Do nada eu entrei no <span class="highlight">shape</span> por menos de R$ 9</h1>
+          <p class="fade show">Guia prático de 90 dias com método visual para déficit calórico, treinos em casa e cardápios simples — tudo pronto pra começar hoje.</p>
+          <ul style="color:var(--muted);margin-top:12px">
+            <li>Gráficos fáceis que mostram exatamente como funciona o déficit</li>
+            <li>Planos adaptáveis para quem tem pouca grana</li>
+            <li>Treinos curtos, 20–30 minutos por dia</li>
+          </ul>
+
+          <div style="margin-top:16px">
+            <a href="https://pay.kiwify.com.br/fH5eCL6" class="buy-btn">Quero por R$ 8,99</a>
+            <div class="micro">Entrega imediata em PDF + planilha editável</div>
+          </div>
+
+          <div class="visuals" style="margin-top:20px">
+            <img src="fotos/alimentação.jpg" alt="treino" style="width:65%" />
+            <img src="fotos/treino.jpg" alt="alimentacao" style="width:35%" />
+          </div>
+        </div>
+
+        <aside>
+          <div class="price-card">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div>
+                <div style="font-size:13px;color:var(--muted)">Guia completo</div>
+                <div class="price">R$ 8,99</div>
+              </div>
+              <div style="text-align:right">
+                <div class="old">R$ 49,90</div>
+                <div style="font-size:12px;color:var(--muted)">Lançamento</div>
+              </div>
+            </div>
+            <a id="compra" class="buy-btn" href="https://pay.kiwify.com.br/fH5eCL6" style="display:block;text-align:center;margin-top:14px">Comprar agora</a>
+            <div class="micro">Pagamento seguro • Entrega automática • Garantia 7 dias</div>
+
+            <div style="margin-top:12px;font-size:13px;color:var(--muted)">
+              <strong>Resumo rápido:</strong>
+              <ul style="margin:8px 0 0;padding-left:18px;color:var(--muted)">
+                <li>PDF bonito com gráficos</li>
+                <li>Planilha de controle semanal</li>
+                <li>Desafio de 90 dias passo a passo</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;text-align:center;color:var(--muted);font-size:13px">Já compraram: <strong>1.238</strong> pessoas</div>
+        </aside>
+      </section>
+
+      <!-- FEATURES -->
+      <section class="features">
+        <div class="card fade show">
+          <h3>Déficit calórico explicado</h3>
+          <p>Gráficos visuais e um passo a passo pra você entender quanto comer sem complicação.</p>
+        </div>
+        <div class="card fade show">
+          <h3>Cardápios econômicos</h3>
+          <p>Opções acessíveis pra montar refeições gostosas gastando pouco.</p>
+        </div>
+        <div class="card fade show">
+          <h3>Treinos em casa</h3>
+          <p>Séries curtas que funcionam pra quem tem pouco tempo e pouco espaço.</p>
+        </div>
+      </section>
+
+      <!-- COMO FUNCIONA -->
+      <section id="como" class="how">
+        <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+          <div style="flex:1;min-width:260px">
+            <h2>Como funciona (em 3 passos)</h2>
+            <ol style="color:var(--muted)">
+              <li><strong>Entenda:</strong> Gráfico simples mostra TDEE e déficit objetivo.</li>
+              <li><strong>Planeje:</strong> Cardápios prontos e adaptáveis.</li>
+              <li><strong>Execute:</strong> Treinos e acompanhamento semanal.</li>
+            </ol>
+            <p class="small">Conteúdo direto, sem enrolação — pensado pra conversão e sucesso rápido.</p>
+          </div>
+          <div style="flex:0 0 360px;">
+            <img src="fotos/grafico.png" alt="grafico" style="width:100%;border-radius:10px"/>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section id="depoimentos">
+        <h2>Depoimentos reais</h2>
+        <div class="testimonials">
+          <div class="t">
+            <strong>Lucas S.</strong>
+            <div class="small">Comprei só de meme e do nada comecei a focar e entrei no shape. Valeu cada centavo!</div>
+          </div>
+          <div class="t">
+            <strong>Bruno M.</strong>
+            <div class="small">Achei que era piada, mas segui o guia e já perdi 4kg. Muito direto e fácil de seguir.</div>
+          </div>
+          <div class="t">
+            <strong>Felipe A.</strong>
+            <div class="small">Mano, isso aqui mudou meu foco. Treino todo dia agora, sem enrolação.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq">
+        <h2>Perguntas frequentes</h2>
+        <details style="margin-bottom:8px"><summary><strong>Funciona para iniciantes?</strong></summary><div style="padding:8px 0;color:var(--muted)">Sim. O guia foi pensado para quem nunca treinou e pra quem já treina.</div></details>
+        <details style="margin-bottom:8px"><summary><strong>Preciso de academia?</strong></summary><div style="padding:8px 0;color:var(--muted)">Não. Incluímos variações sem equipamento.</div></details>
+        <details style="margin-bottom:8px"><summary><strong>Posso acessar no celular?</strong></summary><div style="padding:8px 0;color:var(--muted)">Sim — o PDF e a planilha funcionam em celular e computador.</div></details>
+      </section>
+
+      <!-- GUARANTEE -->
+      <section style="background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border:1px solid rgba(255,255,255,0.02);text-align:center">
+        <h3>Garantia de 7 dias — sem risco</h3>
+        <p class="small">Se não gostar, reembolso total em até 7 dias após a compra.</p>
+        <a class="buy-btn" href="https://pay.kiwify.com.br/fH5eCL6">Quero testar por R$ 8,99</a>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© 2025 Guia do Shape • Versão Express • Preço promocional R$ 8,99</div>
+      <div style="margin-top:6px"></div>
+    </footer>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      document.querySelectorAll('.fade').forEach(function(el,i){
+        setTimeout(function(){el.classList.add('show')}, 120*i)
+      })
+    })
+  </script>
+</body>
+</html>
